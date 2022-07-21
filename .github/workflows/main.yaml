@@ -9,8 +9,9 @@ jobs:
         uses: actions/checkout@v3
       - name: use a composite action
         id: foo
-        uses: supesharisuto/composite-actions/random-number-action@v1.1
+        uses: supesharisuto/composite-actions@v1.1
         with:
+          destinationFolder: '/random-number-action'
           who-to-greet: 'Supesharisuto '
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
