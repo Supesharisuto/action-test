@@ -10,11 +10,12 @@ jobs:
         with:
           repository: supesharisuto/composite-actions
           path: composite-actions
+          branch: main
       - name: checkout code
         uses: actions/checkout@v3
       - name: use a specific action
         id: foo
-        uses: ./.github/actions/random-number-action@v1.1
+        uses: ./composite-actions/.github/actions/random-number-action@v1.1
         with:
           who-to-greet: 'Supesharisuto '
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
