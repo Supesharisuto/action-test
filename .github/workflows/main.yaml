@@ -11,8 +11,9 @@ jobs:
       - name: use a specific action
         id: foo@v1.1
         uses: supesharisuto/composite-actions/random-number-action@v1.1
-          with:
-            who-to-greet: 'Supesharisuto '
+        with:
+          who-to-greet: 'Supesharisuto '
+
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
           shell: bash
       -
