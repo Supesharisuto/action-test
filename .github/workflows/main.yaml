@@ -8,13 +8,13 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v3
 
-          #- name: use a specific action
-          #id: foo
-          #uses: supesharisuto/composite-actions/random-number-action
-          #with:
-          #who-to-greet: 'Supesharisuto '
-          #- run: echo random-number ${{ steps.foo.outputs.random-number }}
-          #shell: bash
+      - name: use a specific action
+        id: foo@v1.1
+        uses: supesharisuto/composite-actions/random-number-action@v1.1
+          with:
+            who-to-greet: 'Supesharisuto '
+      - run: echo random-number ${{ steps.foo.outputs.random-number }}
+          shell: bash
       -
         # for debug only do not enable
         # https://github.com/marketplace/actions/debugging-with-tmate
