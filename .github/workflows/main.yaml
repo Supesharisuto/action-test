@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
       - name: use a specific action
         id: foo
-        uses: ./composite-actions/.github/actions/random-number-action@v1.1
+        uses: supesharisuto/composite-actions//random-number-action@v1.1
         with:
           who-to-greet: 'Supesharisuto '
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
